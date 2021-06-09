@@ -26,7 +26,7 @@ class RedisClient  {
   }
 
   async del(key) {
-    this.client.del(key)
+    this.client.del(key);
   }
 }
 
