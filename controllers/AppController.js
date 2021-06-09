@@ -12,8 +12,8 @@ class AppController {
 
   static getStats(req, res) {
     const stats = {
-      users: RedisClient.isAlive(),
-      files: DBClient.isAlive()
+      users: DBClient.nbUsers(),
+      files: DBClient.nbFiles()
     };
     return res.status(200).send(stats);
   }
